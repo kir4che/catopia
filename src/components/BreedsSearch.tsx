@@ -11,7 +11,7 @@ export default function BreedsSearch() {
         />
         <button
           type='submit'
-          className='w-full px-8 py-4 mt-3 font-medium text-white border-none rounded-full bg-primary-green hover:bg-primary-green-hover focus:outline-none sm:mt-0 sm:-ml-10 sm:mr-20 sm:w-auto sm:text-sm sm:rounded-l-none'
+          className='w-full px-8 py-2.5 mt-3 font-medium text-white rounded-full bg-primary-green hover:bg-primary-green-hover sm:mt-0 sm:-ml-10 sm:py-4 sm:mr-20 sm:w-auto sm:text-sm sm:rounded-l-none'
         >
           Search
         </button>

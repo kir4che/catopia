@@ -147,7 +147,7 @@ export default function AdoptionFilter({ onFilterChange }: { onFilterChange: (ci
           </RadioGroup>
         </div>
       </menu >
-      <button className="flex w-36 justify-center py-1.5 text-sm tracking-widest font-medium text-white border-none bg-primary-green hover:bg-primary-green-hover" type='button' onClick={handleClearAll}>清除全部</button>
+      <button className="w-36 py-1.5 text-sm border-2 tracking-widest font-medium text-primary-green border-primary-green hover:text-white  hover:bg-primary-green" type='button' onClick={handleClearAll}>清除全部</button>
     </div >
   )
 }

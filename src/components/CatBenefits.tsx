@@ -9,7 +9,7 @@ export default function CatBenefits() {
         <hr className='border-b-[3px] border-[#1C1917] w-16' />
         <h1 className='tracking-wide'>你真的了解貓咪嗎？</h1>
         <p className='max-w-xl pb-2 leading-relaxed'>貓咪是我們生活中可愛且神秘的伴侶，但你是否真的了解牠們呢？貓咪擁有獨特的行為和需求，並展現出令人驚奇的本能和智慧。透過參與貓咪測驗，你可以測試自己對貓咪的了解程度，並發現更多關於貓咪的小知識。<br /><br />點擊下方按鈕，看看你是否真正瞭解貓咪的世界！</p>
-        <button className="flex items-center w-64 px-16 py-3 tracking-widest text-white border-0 rounded-xl bg-primary-green hover:bg-primary-green-hover" type='button' onClick={() => router.push('/quiz')}>
+        <button className="flex items-center w-64 px-16 py-2.5 tracking-widest text-white rounded-full bg-primary-green hover:bg-primary-green-hover" type='button' onClick={() => router.push('/quiz')}>
           <p className="inset-0 m-auto text-lg font-medium text-center">開始測驗</p>
           <div className="">
             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -125,7 +125,7 @@ export default function Quiz() {
           <h3 className='mb-8 font-medium text-center'>{questions[currentQuestion].questionText}</h3>
 
           <div className='flex items-center justify-center space-x-8'>
-            <img className='object-cover object-bottom h-56 w-96' src={questions[currentQuestion].questionImg} alt="question image" />
+            <img className='object-cover object-bottom h-64 w-96' src={questions[currentQuestion].questionImg} alt="question image" />
             <div className='space-y-4 w-72'>
               {questions[currentQuestion].answerOptions.map((answerOption) => (
                 <button className='w-full py-1.5 pl-5 bg-white border-[1.8px] rounded-full border-stone-800 text-stone-900 hover:bg-primary-green hover:border-primary-green hover:text-white' type='button' key={currentQuestion} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>

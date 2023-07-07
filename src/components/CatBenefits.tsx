@@ -4,7 +4,7 @@ export default function CatBenefits() {
   const router = useRouter()
 
   return (
-    <div className='flex items-center px-40 pt-24 space-y-6 pb-28'>
+    <div className='flex items-center px-6 pt-24 space-x-6 lg:space-x-0 md:px-12 lg:px-20 pb-28'>
       <div className='space-y-8'>
         <hr className='border-b-[3px] border-[#1C1917] w-16' />
         <h1 className='tracking-wide'>你真的了解貓咪嗎？</h1>

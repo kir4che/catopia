@@ -1,5 +1,4 @@
 import { Button, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger } from '@chakra-ui/react'
-import { useRef } from 'react'
 
 interface PostType {
   晶片號碼: string
@@ -17,11 +16,10 @@ interface PostType {
   EMail: string
   PICTURE: string
 }
+
 export default function DetailLostInfo({ post }: { post: PostType }) {
-  const initialFocusRef = useRef()
   return (
     <Popover
-      initialFocusRef={initialFocusRef}
       placement='bottom'
       closeOnBlur={false}
     >

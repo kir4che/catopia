@@ -1,11 +1,9 @@
-import BreedsSearch from '@/components/BreedsSearch'
 
 export default function Banner() {
   return (
-    <div className="w-full px-20 pt-28 pb-36 bg-[url('/images/HeroImagelg.png')] bg-cover bg-right-bottom bg-no-repeat sm:rounded-t-[40px]">
-      <img className='h-24 mb-4 white_logo' src='../images/CatwikiLogo.svg' alt='catwiki logo' />
-      <h3 className='max-w-sm tracking-wider text-white mb-9'>Get to know more about your cat breed</h3>
-      <BreedsSearch />
+    <div className="px-6 md:px-12 lg:px-20 py-32 lg:py-52 text-white bg-[url('/images/Banner_lg.png')] bg-cover bg-right-top bg-no-repeat sm:rounded-t-[40px]">
+      <h1 className='mb-8 text-6xl font-medium tracking-wider'>連結全球貓奴的圈子</h1>
+      <p>盡情展現對貓咪的愛吧！</p>
     </div>
   )
 }

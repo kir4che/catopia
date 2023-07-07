@@ -27,8 +27,8 @@ export default function TopBreedList() {
 
   return (<>
     {topBreed.map((breed, index) => (
-      <div>
-        <img className='object-cover w-full mb-3 h-72 rounded-xl xl:h-64' src={breed.url} key={index} alt={breed.name} />
+      <div key={index}>
+        <img className='object-cover w-full h-64 mb-3 rounded-xl xl:h-56' src={breed.url} alt={breed.name} />
         <h3 className='font-medium text-center md:text-left'>{breed.name}</h3>
       </div>
     ))}

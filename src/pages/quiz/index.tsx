@@ -108,7 +108,6 @@ export default function Quiz() {
 
   const handleAnswerOptionClick = (isCorrect: boolean) => {
     if (isCorrect) setScore(score + 1);
-
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) setCurrentQuestion(nextQuestion);
     else setShowScore(true);
@@ -117,9 +116,9 @@ export default function Quiz() {
     <div className='pt-[5%] w-full h-full mx-auto'>
       {showScore ? (
         <div className='space-y-6'>
-          <h4 className='font-medium' > 你的得分是 {score} 0 分</h4>
+          <h4 className='font-medium'> 你的得分是 {score} 0 分</h4>
           <button className='flex justify-center py-2 border-none rounded-full bg-primary-green hover:bg-primary-green-hover' type='button' onClick={() => { setShowScore(false); setCurrentQuestion(0); }}>重新測驗</button>
-        </div >
+        </div>
       ) : (
         <>
           <p className='mb-4 text-center'>問題 {currentQuestion + 1} / {questions.length}</p>
@@ -132,9 +131,9 @@ export default function Quiz() {
                 <button className='w-full py-1.5 pl-5 bg-white border-[1.8px] rounded-full border-stone-800 text-stone-900 hover:bg-primary-green hover:border-primary-green hover:text-white' type='button' key={currentQuestion} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
               ))}
             </div>
-          </div></>
-      )
-      }
-    </div >
+          </div>
+        </>
+      )}
+    </div>
   );
 }

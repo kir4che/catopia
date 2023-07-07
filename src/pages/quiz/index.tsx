@@ -102,9 +102,9 @@ export default function Quiz() {
     },
   ];
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [showScore, setShowScore] = useState(false);
-  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+  const [showScore, setShowScore] = useState<boolean>(false);
+  const [score, setScore] = useState<number>(0);
 
   const handleAnswerOptionClick = (isCorrect: boolean) => {
     if (isCorrect) setScore(score + 1);

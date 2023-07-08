@@ -18,13 +18,13 @@ export default function PublicAdoption() {
   }
 
   return (
-    <div className="w-full px-10 pt-4 pb-20 mx-auto">
+    <div className="w-full pt-4 pb-20 mx-auto">
       <AlertInfo info={'資料來源於行政院農委會的動物認領養 API，集合所有的公立收容所送養貓咪之資訊，有意領養請直洽各區收容所。'} />
-      <div className="flex flex-row flex-wrap pt-12">
-        <aside className="hidden lg:block lg:w-1/5">
+      <div className="flex pt-12 sm:space-x-12 lg:space-x-20">
+        <aside className="hidden md:block">
           <AdoptionFilter onFilterChange={handleFilterChange} />
         </aside>
-        <main className="lg:w-4/5">
+        <main>
           <AdoptionPost {...filterValues} />
         </main>
       </div >

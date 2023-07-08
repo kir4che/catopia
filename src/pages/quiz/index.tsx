@@ -113,26 +113,36 @@ export default function Quiz() {
     else setShowScore(true);
   };
   return (
-    <div className='pt-[5%] w-full h-full mx-auto'>
+    <div className='flex flex-col m-auto'>
       {showScore ? (
-        <div className='space-y-6'>
-          <h4 className='font-medium'> 你的得分是 {score} 0 分</h4>
-          <button className='flex justify-center py-2 border-none rounded-full bg-primary-green hover:bg-primary-green-hover' type='button' onClick={() => { setShowScore(false); setCurrentQuestion(0); }}>重新測驗</button>
+        <div className='mb-24 space-y-6'>
+          <h4 className='font-medium'> 你的得分是 {score}0 分</h4>
+          <button
+            type='button'
+            className='flex justify-center px-10 py-1.5 font-medium text-white border-none rounded-full bg-primary-green hover:bg-primary-green-hover'
+            onClick={() => { setShowScore(false); setCurrentQuestion(0); }}>
+            重新測驗
+          </button>
         </div>
       ) : (
-        <>
+        <div className='mb-24'>
           <p className='mb-4 text-center'>問題 {currentQuestion + 1} / {questions.length}</p>
           <h3 className='mb-8 font-medium text-center'>{questions[currentQuestion].questionText}</h3>
-
           <div className='flex items-center justify-center space-x-8'>
             <img className='object-cover object-bottom h-64 w-96' src={questions[currentQuestion].questionImg} alt="question image" />
             <div className='space-y-4 w-72'>
-              {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <button className='w-full py-1.5 pl-5 bg-white border-[1.8px] rounded-full border-stone-800 text-stone-900 hover:bg-primary-green hover:border-primary-green hover:text-white' type='button' key={currentQuestion} onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+              {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                <button
+                  type='button'
+                  className='w-full py-1.5 bg-white border-2 rounded-full border-stone-800 text-stone-900 hover:bg-primary-green hover:border-primary-green hover:text-white'
+                  key={index}
+                  onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+                  {answerOption.answerText}
+                </button>
               ))}
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

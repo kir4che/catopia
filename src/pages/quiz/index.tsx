@@ -113,7 +113,7 @@ export default function Quiz() {
     else setShowScore(true);
   };
   return (
-    <div className='flex flex-col m-auto'>
+    <div className='flex m-auto'>
       {showScore ? (
         <div className='mb-24 space-y-6'>
           <h4 className='font-medium'> 你的得分是 {score}0 分</h4>
@@ -125,12 +125,12 @@ export default function Quiz() {
           </button>
         </div>
       ) : (
-        <div className='mb-24'>
+        <div className='mb-12 md:mb-24'>
           <p className='mb-4 text-center'>問題 {currentQuestion + 1} / {questions.length}</p>
           <h3 className='mb-8 font-medium text-center'>{questions[currentQuestion].questionText}</h3>
-          <div className='flex items-center justify-center space-x-8'>
+          <div className='flex flex-col items-center justify-center space-y-6 md:space-x-8 md:flex-row'>
             <img className='object-cover object-bottom h-64 w-96' src={questions[currentQuestion].questionImg} alt="question image" />
-            <div className='space-y-4 w-72'>
+            <div className='w-full space-y-4 md:w-72'>
               {questions[currentQuestion].answerOptions.map((answerOption, index) => (
                 <button
                   type='button'

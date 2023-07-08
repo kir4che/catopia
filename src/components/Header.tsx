@@ -4,16 +4,17 @@ import Link from 'next/link';
 
 
 import { useRouter } from 'next/navigation';
+import BurgerMenu from './BurgerMenu';
 
 export default function Header() {
   const router = useRouter()
 
   return (
-    <div className="flex items-center justify-start w-full py-5">
+    <div className="flex items-center justify-between w-full px-4 py-5 sm:px-0 sm:justify-start">
       <a href="/" onClick={() => router.push('/')}>
         <img className='pr-8 w-36' src="../images/CatopiaLogo.png" alt="catopia logo" />
       </a>
-      <ul className="flex items-center space-x-5 text-sm">
+      <ul className="items-center hidden space-x-5 text-sm sm:flex">
         <li><Link href="/dex">喵喵圖鑑</Link></li>
         <li><Link href="/gallery">我家的喵</Link></li>
         <li>
@@ -30,6 +31,7 @@ export default function Header() {
         <li><Link href="/lost">走失協尋</Link></li>
         <li><Link href="/quiz">愛喵測驗</Link></li>
       </ul>
+      <div className='block sm:hidden'><BurgerMenu /></div>
     </div>
   )
 }

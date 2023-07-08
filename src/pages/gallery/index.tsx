@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Grid, GridItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Grid, GridItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, useDisclosure, useToast } from '@chakra-ui/react';
 import { useState } from 'react';
 
 type Cat = {
@@ -39,16 +39,40 @@ export default function Gallery() {
     },
   ]
 
+  const toast = useToast()
+
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [catIndex, setCatIndex] = useState<number | null>(null)
+  const [catIndex, setCatIndex] = useState<number>(0)
 
   return (
     <>
-      <h3 className="mt-6 mb-5 font-bold text-center">投稿分享<span className='text-3xl text-transparent bg-gradient-to-r bg-clip-text from-secondary-blue to-primary-green'>你家喵喵</span>，讓大家看看有<span className='text-3xl text-transparent bg-gradient-to-r bg-clip-text from-primary-green to-secondary-blue'>多可愛</span>！</h3>
-      <button className="flex items-center px-20 py-2.5 mx-auto mb-12 space-x-1 tracking-widest text-white rounded-full bg-primary-green hover:bg-primary-green-hover" type='button'>
-        <p className="inset-0 m-auto text-lg font-medium text-center">我要投稿</p>
+      <h3 className="mt-6 mb-5 font-bold text-center">
+        投稿分享
+        <span className='text-3xl text-transparent bg-gradient-to-r bg-clip-text from-secondary-blue to-primary-green'>
+          你家喵喵
+        </span>
+        ，讓大家看看有
+        <span className='text-3xl text-transparent bg-gradient-to-r bg-clip-text from-primary-green to-secondary-blue'>
+          多可愛
+        </span>
+        ！
+      </h3>
+      <Button
+        className='flex px-16 py-5 mx-auto mb-12 space-x-1 tracking-widest text-white rounded-full bg-primary-green hover:bg-primary-green-hover'
+        onClick={() =>
+          toast({
+            position: 'bottom-left',
+            render: () => (
+              <Box color='white' p={4} bg='blue.400'>
+                尚未開發完成...
+              </Box>
+            ),
+          })
+        }
+      >
+        <p className="text-lg font-medium text-center">我要投稿</p>
         <img width="20" height="20" src="https://img.icons8.com/pastel-glyph/64/FFFFFF/cat--v1.png" alt="cat--v1" />
-      </button>
+      </Button>
       <Grid className='mb-20' templateColumns='repeat(4, 1fr)' gap={6}>
         {catList.map((cat, index) =>
           <GridItem w='100%' h='100%' key={cat.name}>
@@ -72,7 +96,7 @@ export default function Gallery() {
               <ModalHeader>{catList[catIndex].name}</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
-                <p>{catList[catIndex].name}</p>
+                {catList[catIndex].name}
               </ModalBody>
             </ModalContent>
           </Modal>

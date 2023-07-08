@@ -1,4 +1,3 @@
-
 export default function Banner() {
   return (
     <div className="px-6 md:px-12 lg:px-20 py-32 lg:py-52 text-white bg-[url('/images/Banner_lg.png')] bg-cover bg-right-top bg-no-repeat sm:rounded-t-[40px]">

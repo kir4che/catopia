@@ -22,7 +22,7 @@ export default function Header() {
             <MenuButton className='flex items-center justify-between bg-white border-none text-stone-900 hover:bg-white'>
               領養喵喵 <ChevronDownIcon />
             </MenuButton>
-            <MenuList className='p-3 space-y-2 rounded-md shadow-md bg-slate-50 w-36 '>
+            <MenuList className='p-3 space-y-2 rounded-md shadow-md bg-slate-50 w-36' zIndex={1}>
               <MenuItem className='py-1 pl-2 border-none hover:bg-white'><Link href="/publicAdoption">公立領養</Link></MenuItem>
               <MenuItem className='py-1 pl-2 border-none hover:bg-white'><Link href="/generalAdoption">一般領養</Link></MenuItem>
             </MenuList>

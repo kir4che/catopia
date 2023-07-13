@@ -10,7 +10,7 @@ export default function BurgerMenu() {
         aria-label='Options'
         icon={<HamburgerIcon />}
       />
-      <MenuList className='p-3 space-y-2.5 text-sm bg-slate-50 rounded shadow'>
+      <MenuList className='p-3 space-y-2.5 text-sm bg-slate-50 rounded shadow' zIndex={1}>
         <MenuItem>
           <Link href="/dex">喵喵圖鑑</Link>
         </MenuItem>

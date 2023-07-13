@@ -8,7 +8,7 @@ interface AlertInfo {
 export default function AlertInfo({ info }: AlertInfo) {
 
   return (
-    <Stack className='text-sm'>
+    <Stack className='text-sm -z-10' zIndex={-1}>
       <Alert status='info' colorScheme='twitter' variant='left-accent'>
         <AlertIcon />
         {info}
